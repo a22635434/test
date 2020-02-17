@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- disables pinch-scaling of the webview, so that gestures only do what they're supposed to -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+
+    <title></title>
+
+    <script src="https://www.wikitude.com/libs/architect.js"></script>
+    <script>  
+        setTimeout("changeState()",5000 );  
+        function changeState(){  
+            var myDiv = document.getElementById("info-text");
+            if(myDiv.style.display != "none") {
+                myDiv.innerHTML =  "請嘗試平放素色桌面，並對齊框線掃描，避免反光，前後移動以對焦！小B即將出現~~";
+            }
+        }  
+    </script>
+    <link rel="stylesheet" href="css/default.css">
+</head>
+
+<body>
+    <!-- Header -->
+        <div class="container_header simple">
+                <a class="header-left-icon"  href="javascript: World.finish();"  >
+                        <img src="assets/back.svg">
+                    </a>
+                <h1 class="page_title">AR掃描</h1>
+         </div>
+         <div id="info-text">請將您的My Way簽帳金融卡，對齊框線掃描，將出現您專屬的互動服務喔！</div>
+<!-- snapContainer 是3D貼圖區塊請勿刪除 -->
+<div id="tipcontainerios"></div>
+<div id="snapContainer"></div>
+
+</body>
+</html>
+ 
+
+  <script src="js/imageontargetios.js"></script>
